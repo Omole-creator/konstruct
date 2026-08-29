@@ -25,7 +25,7 @@ export function Footer() {
             />
             <span className="font-heading text-base font-bold">Designs &amp; Konstruct Ltd.</span>
           </Link>
-          <p className="mt-4 max-w-xs text-sm text-white/70">{siteConfig.tagline}</p>
+          <p className="mt-4 max-w-xs text-base text-white/70">{siteConfig.tagline}</p>
           <a
             href={INSTAGRAM_URL}
             target="_blank"
@@ -42,13 +42,13 @@ export function Footer() {
           <ul className="mt-4 space-y-3">
             {navLinks.map((link) => (
               <li key={link.href}>
-                <Link href={link.href} className="text-sm text-white/80 hover:text-brand-blue">
+                <Link href={link.href} className="text-base text-white/80 hover:text-brand-blue">
                   {link.label}
                 </Link>
               </li>
             ))}
             <li>
-              <Link href="/quote" className="text-sm text-white/80 hover:text-brand-blue">
+              <Link href="/quote" className="text-base text-white/80 hover:text-brand-blue">
                 Request a Quote
               </Link>
             </li>
@@ -60,7 +60,7 @@ export function Footer() {
           <ul className="mt-4 space-y-3">
             {services.map((service) => (
               <li key={service.slug}>
-                <Link href={`/services/${service.slug}`} className="text-sm text-white/80 hover:text-brand-blue">
+                <Link href={`/services/${service.slug}`} className="text-base text-white/80 hover:text-brand-blue">
                   {service.name}
                 </Link>
               </li>
@@ -72,18 +72,18 @@ export function Footer() {
           <h3 className="text-sm font-semibold uppercase tracking-wider text-white/50">Get in Touch</h3>
           <ul className="mt-4 space-y-4">
             <li>
-              <CallLink className="flex items-center gap-3 text-sm text-white/80 hover:text-brand-blue">
+              <CallLink className="flex items-center gap-3 text-base text-white/80 hover:text-brand-blue">
                 <Phone className="h-4 w-4 shrink-0" />
                 <span>Call: +234 808 951 2286</span>
               </CallLink>
             </li>
             <li>
-              <WhatsAppLink className="flex items-center gap-3 text-sm text-white/80 hover:text-brand-blue">
+              <WhatsAppLink className="flex items-center gap-3 text-base text-white/80 hover:text-brand-blue">
                 <MessageCircle className="h-4 w-4 shrink-0" />
                 <span>WhatsApp: 0813 045 2210</span>
               </WhatsAppLink>
             </li>
-            <li className="flex items-center gap-3 text-sm text-white/50">
+            <li className="flex items-center gap-3 text-base text-white/50">
               <MapPin className="h-4 w-4 shrink-0" />
               <span>Serving clients across Nigeria</span>
             </li>

@@ -15,12 +15,12 @@ export default function FaqsPage() {
   return (
     <>
       <section className="bg-white pb-8 pt-16 text-center sm:pt-20">
-        <div className="mx-auto max-w-2xl px-4 sm:px-6">
+        <Reveal className="mx-auto max-w-2xl px-4 sm:px-6">
           <p className="text-sm font-semibold uppercase tracking-wider text-brand-blue">FAQs</p>
           <h1 className="mt-3 font-heading text-3xl font-bold tracking-tight text-brand-navy sm:text-4xl md:text-5xl">
             Questions we hear a lot
           </h1>
-        </div>
+        </Reveal>
       </section>
 
       <Reveal as="section" className="pb-20">

@@ -24,16 +24,16 @@ export default function ServicesPage() {
             priority
           />
         </div>
-        <div className="relative mx-auto max-w-3xl px-4 text-center sm:px-6">
+        <Reveal className="relative mx-auto max-w-3xl px-4 text-center sm:px-6">
           <p className="text-sm font-semibold uppercase tracking-wider text-brand-blue">What We Do</p>
           <h1 className="mt-3 font-heading text-3xl font-bold tracking-tight text-white sm:text-4xl md:text-5xl">
             Glass work, handled end to end
           </h1>
-          <p className="mt-5 text-white/75">
+          <p className="mt-5 text-base text-white/75">
             From the first measurement to the final seal, here's where we
             come in for residential, commercial, and institutional projects.
           </p>
-        </div>
+        </Reveal>
       </section>
 
       <Reveal as="section" className="py-20">

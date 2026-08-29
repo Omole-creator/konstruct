@@ -56,3 +56,6 @@ next-env.d.ts
 /COPYWRITING-PLAYBOOK.md
 /.qodo/
 /.claude/
+
+.vercel
+.env*

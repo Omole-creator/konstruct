@@ -12,8 +12,10 @@ const buttonVariants = cva(
         default:
           "bg-brand-blue text-white shadow-glow hover:bg-brand-blue-dark",
         navy: "bg-brand-navy text-white hover:bg-brand-navy-deep",
+        white:
+          "bg-white text-brand-blue shadow-lg hover:bg-blue-50 active:scale-[0.98]",
         outline:
-          "border border-white/40 text-white hover:bg-white/10",
+          "border border-white/40 text-white hover:bg-white/10 active:scale-[0.98]",
         "outline-navy":
           "border border-brand-navy/20 text-brand-navy hover:bg-brand-blue-tint",
         ghost: "text-brand-navy hover:bg-brand-blue-tint",
@@ -21,8 +23,8 @@ const buttonVariants = cva(
       },
       size: {
         default: "h-12 px-6 text-base",
-        sm: "h-10 px-4 text-sm",
-        lg: "h-14 px-8 text-base",
+        sm: "h-10 px-4 text-base",
+        lg: "h-12 px-5 text-base sm:h-14 sm:px-8",
       },
     },
     defaultVariants: {

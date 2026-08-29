@@ -44,7 +44,7 @@ export function WhyChooseUs() {
                   <point.icon className="h-5 w-5" />
                 </span>
                 <h3 className="mt-4 font-heading text-base font-bold text-brand-navy">{point.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-brand-navy/65">{point.description}</p>
+                <p className="mt-2 text-base leading-relaxed text-brand-navy/65">{point.description}</p>
               </div>
             ))}
           </div>

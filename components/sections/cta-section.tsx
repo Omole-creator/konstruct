@@ -19,7 +19,7 @@ export function CTASection({
             <h2 className="font-heading text-2xl font-bold tracking-tight text-white sm:text-3xl">
               {heading}
             </h2>
-            <p className="mx-auto mt-3 max-w-xl text-sm text-white/85 sm:text-base">{subheading}</p>
+            <p className="mx-auto mt-3 max-w-xl text-base text-white/85">{subheading}</p>
           </div>
 
           <div className="flex flex-col items-center gap-4 sm:flex-row">

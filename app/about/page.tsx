@@ -56,7 +56,7 @@ export default function AboutPage() {
           <div className="rounded-2xl bg-white p-8 shadow-card">
             <Target className="h-8 w-8 text-brand-blue" />
             <h2 className="mt-4 font-heading text-xl font-bold text-brand-navy">Our mission</h2>
-            <p className="mt-3 text-sm leading-relaxed text-brand-navy/65">
+            <p className="mt-3 text-base leading-relaxed text-brand-navy/65">
               To fit glass that does its job quietly for years: no leaks, no
               loose panels, no callbacks. We measure carefully, use the
               glass type the job actually calls for, and seal every edge
@@ -66,7 +66,7 @@ export default function AboutPage() {
           <div className="rounded-2xl bg-white p-8 shadow-card">
             <ShieldCheck className="h-8 w-8 text-brand-blue" />
             <h2 className="mt-4 font-heading text-xl font-bold text-brand-navy">Craftsmanship &amp; safety</h2>
-            <p className="mt-3 text-sm leading-relaxed text-brand-navy/65">
+            <p className="mt-3 text-base leading-relaxed text-brand-navy/65">
               Glass installed wrong isn't just a cosmetic problem, it's a
               safety one. We work to the standard each project calls for,
               from the tempered glass in a shower door to the framing on a

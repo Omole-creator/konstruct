@@ -55,7 +55,7 @@ export default function HomePage() {
           <FeaturedProjectsCarousel />
         </div>
         <div className="mt-6 text-center">
-          <Link href="/gallery" className="text-sm font-semibold text-brand-blue hover:underline">
+          <Link href="/gallery" className="text-base font-semibold text-brand-blue hover:underline">
             See the full gallery
           </Link>
         </div>

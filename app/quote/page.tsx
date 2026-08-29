@@ -29,17 +29,17 @@ export default function QuotePage() {
           </div>
 
           <div className="mt-8 grid gap-4 sm:grid-cols-2">
-            <CallLink className="flex items-center justify-center gap-2 rounded-xl border border-brand-navy/15 py-4 text-sm font-semibold text-brand-navy hover:border-brand-blue hover:text-brand-blue">
+            <CallLink className="flex items-center justify-center gap-2 rounded-xl border border-brand-navy/15 py-4 text-base font-semibold text-brand-navy hover:border-brand-blue hover:text-brand-blue">
               <Phone className="h-4 w-4" />
               Call: +234 808 951 2286
             </CallLink>
-            <WhatsAppLink className="flex items-center justify-center gap-2 rounded-xl border border-brand-navy/15 py-4 text-sm font-semibold text-brand-navy hover:border-brand-blue hover:text-brand-blue">
+            <WhatsAppLink className="flex items-center justify-center gap-2 rounded-xl border border-brand-navy/15 py-4 text-base font-semibold text-brand-navy hover:border-brand-blue hover:text-brand-blue">
               <MessageCircle className="h-4 w-4" />
               WhatsApp: 0813 045 2210
             </WhatsAppLink>
           </div>
 
-          <div className="mt-6 flex items-center justify-center gap-2 text-sm text-brand-navy/55">
+          <div className="mt-6 flex items-center justify-center gap-2 text-base text-brand-navy/55">
             <Clock className="h-4 w-4" />
             We usually respond within 24 hours
           </div>

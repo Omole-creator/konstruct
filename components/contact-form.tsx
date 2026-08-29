@@ -40,21 +40,21 @@ export function ContactForm() {
       />
 
       <div>
-        <label htmlFor="contact-name" className="mb-2 block text-sm font-semibold text-brand-navy">
+        <label htmlFor="contact-name" className="mb-2 block text-base font-semibold text-brand-navy">
           Full name
         </label>
         <input id="contact-name" name="name" type="text" required className={inputClass} placeholder="Your name" />
       </div>
 
       <div>
-        <label htmlFor="contact-phone" className="mb-2 block text-sm font-semibold text-brand-navy">
+        <label htmlFor="contact-phone" className="mb-2 block text-base font-semibold text-brand-navy">
           Phone number
         </label>
         <input id="contact-phone" name="phone" type="tel" required className={inputClass} placeholder="080..." />
       </div>
 
       <div>
-        <label htmlFor="contact-message" className="mb-2 block text-sm font-semibold text-brand-navy">
+        <label htmlFor="contact-message" className="mb-2 block text-base font-semibold text-brand-navy">
           Message
         </label>
         <textarea
@@ -73,7 +73,7 @@ export function ContactForm() {
       </Button>
 
       {submitted ? (
-        <p className="text-sm text-brand-blue">
+        <p className="text-base text-brand-blue">
           WhatsApp should have opened in a new tab with your message ready to send. If it didn't, message us
           directly at 0813 045 2210.
         </p>
@@ -83,4 +83,4 @@ export function ContactForm() {
 }
 
 const inputClass =
-  "w-full rounded-xl border border-brand-navy/15 bg-white px-4 py-3 text-sm text-brand-navy placeholder:text-brand-navy/35 focus:border-brand-blue focus:outline-none focus:ring-2 focus:ring-brand-blue/20";
+  "w-full rounded-xl border border-brand-navy/15 bg-white px-4 py-3 text-base text-brand-navy placeholder:text-brand-navy/35 focus:border-brand-blue focus:outline-none focus:ring-2 focus:ring-brand-blue/20";

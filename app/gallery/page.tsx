@@ -15,15 +15,15 @@ export default function GalleryPage() {
   return (
     <>
       <section className="bg-white pb-8 pt-16 text-center sm:pt-20">
-        <div className="mx-auto max-w-2xl px-4 sm:px-6">
+        <Reveal className="mx-auto max-w-2xl px-4 sm:px-6">
           <p className="text-sm font-semibold uppercase tracking-wider text-brand-blue">Our Work</p>
           <h1 className="mt-3 font-heading text-3xl font-bold tracking-tight text-brand-navy sm:text-4xl md:text-5xl">
             Projects we've put our name on
           </h1>
-          <p className="mt-5 text-brand-navy/70">
+          <p className="mt-5 text-base text-brand-navy/70">
             Filter by category, then tap any photo or video to see it up close.
           </p>
-        </div>
+        </Reveal>
       </section>
 
       <Reveal as="section" className="pb-20">
@@ -34,7 +34,7 @@ export default function GalleryPage() {
             <h2 className="font-heading text-xl font-bold text-brand-navy">
               Have something similar in mind?
             </h2>
-            <p className="mt-2 text-sm text-brand-navy/65">
+            <p className="mt-2 text-base text-brand-navy/65">
               Send us your project details and we'll tell you what it takes.
             </p>
             <div className="mt-6">

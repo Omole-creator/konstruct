@@ -27,7 +27,7 @@ export function FaqAccordion({ items }: { items: Faq[] }) {
             </button>
             {isOpen ? (
               <div className="px-6 pb-6">
-                <p className="text-sm leading-relaxed text-brand-navy/70">{item.answer}</p>
+                <p className="text-base leading-relaxed text-brand-navy/70">{item.answer}</p>
               </div>
             ) : null}
           </div>

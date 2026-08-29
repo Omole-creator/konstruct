@@ -102,7 +102,7 @@ export function QuoteForm() {
       <Field label="Photo or blueprint (optional)" htmlFor="attachment">
         <label
           htmlFor="attachment"
-          className="flex cursor-pointer items-center gap-3 rounded-xl border border-dashed border-brand-navy/20 px-4 py-3 text-sm text-brand-navy/60 hover:border-brand-blue/40"
+          className="flex cursor-pointer items-center gap-3 rounded-xl border border-dashed border-brand-navy/20 px-4 py-3 text-base text-brand-navy/60 hover:border-brand-blue/40"
         >
           <Paperclip className="h-4 w-4 shrink-0" />
           <span>{hasAttachment ? "File selected" : "Choose a file"}</span>
@@ -115,7 +115,7 @@ export function QuoteForm() {
           className="hidden"
           onChange={(event) => setHasAttachment(Boolean(event.target.files?.length))}
         />
-        <p className="mt-2 text-xs text-brand-navy/50">
+        <p className="mt-2 text-sm text-brand-navy/50">
           wa.me links can't carry files, so once WhatsApp opens with your details filled in, attach the photo or
           blueprint there before you hit send.
         </p>
@@ -127,7 +127,7 @@ export function QuoteForm() {
       </Button>
 
       {submitted ? (
-        <p className="text-sm text-brand-blue">
+        <p className="text-base text-brand-blue">
           WhatsApp should have opened in a new tab with your details filled in. If it didn't, check your pop-up
           blocker, or message us directly at 0813 045 2210.
         </p>
@@ -137,7 +137,7 @@ export function QuoteForm() {
 }
 
 const inputClass =
-  "w-full rounded-xl border border-brand-navy/15 bg-white px-4 py-3 text-sm text-brand-navy placeholder:text-brand-navy/35 focus:border-brand-blue focus:outline-none focus:ring-2 focus:ring-brand-blue/20";
+  "w-full rounded-xl border border-brand-navy/15 bg-white px-4 py-3 text-base text-brand-navy placeholder:text-brand-navy/35 focus:border-brand-blue focus:outline-none focus:ring-2 focus:ring-brand-blue/20";
 
 function Field({
   label,
@@ -150,7 +150,7 @@ function Field({
 }) {
   return (
     <div>
-      <label htmlFor={htmlFor} className="mb-2 block text-sm font-semibold text-brand-navy">
+      <label htmlFor={htmlFor} className="mb-2 block text-base font-semibold text-brand-navy">
         {label}
       </label>
       {children}

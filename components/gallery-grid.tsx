@@ -45,7 +45,7 @@ export function GalleryGrid() {
       </div>
 
       {items.length === 0 ? (
-        <p className="mt-12 text-center text-sm text-brand-navy/60">
+        <p className="mt-12 text-center text-base text-brand-navy/60">
           No projects in this category yet. Check back soon, or request a quote for yours.
         </p>
       ) : (

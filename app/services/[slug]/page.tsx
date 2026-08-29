@@ -75,7 +75,7 @@ export default async function ServiceDetailPage({
             <h2 className="font-heading text-xl font-bold text-brand-navy">What's included</h2>
             <ul className="mt-5 space-y-3">
               {service.included.map((item) => (
-                <li key={item} className="flex items-start gap-3 text-sm text-brand-navy/70">
+                <li key={item} className="flex items-start gap-3 text-base text-brand-navy/70">
                   <Check className="mt-0.5 h-4 w-4 shrink-0 text-brand-blue" />
                   {item}
                 </li>
@@ -86,7 +86,7 @@ export default async function ServiceDetailPage({
             <h2 className="font-heading text-xl font-bold text-brand-navy">Typical use cases</h2>
             <ul className="mt-5 space-y-3">
               {service.useCases.map((item) => (
-                <li key={item} className="flex items-start gap-3 text-sm text-brand-navy/70">
+                <li key={item} className="flex items-start gap-3 text-base text-brand-navy/70">
                   <Check className="mt-0.5 h-4 w-4 shrink-0 text-brand-blue" />
                   {item}
                 </li>

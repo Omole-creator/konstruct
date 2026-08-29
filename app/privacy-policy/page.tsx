@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 
+import { Reveal } from "@/components/reveal";
+
 export const metadata: Metadata = {
   title: "Privacy Policy",
   description: "How Designs & Konstruct Ltd. handles the information you share with us.",
@@ -8,11 +10,11 @@ export const metadata: Metadata = {
 export default function PrivacyPolicyPage() {
   return (
     <section className="bg-white py-16 sm:py-20">
-      <div className="mx-auto max-w-2xl px-4 sm:px-6">
+      <Reveal className="mx-auto max-w-2xl px-4 sm:px-6">
         <h1 className="font-heading text-3xl font-bold tracking-tight text-brand-navy">Privacy Policy</h1>
-        <p className="mt-4 text-sm text-brand-navy/60">Last updated: 2026</p>
+        <p className="mt-4 text-base text-brand-navy/60">Last updated: 2026</p>
 
-        <div className="mt-8 space-y-6 text-sm leading-relaxed text-brand-navy/75">
+        <div className="mt-8 space-y-6 text-base leading-relaxed text-brand-navy/75">
           <p>
             When you fill out the Get a Quote or Contact form on this site,
             we ask for your name, phone number, and optionally your email
@@ -36,7 +38,7 @@ export default function PrivacyPolicyPage() {
             appear here.
           </p>
         </div>
-      </div>
+      </Reveal>
     </section>
   );
 }

@@ -32,11 +32,11 @@ export default function ContactPage() {
               <div className="rounded-2xl border border-brand-navy/10 bg-white p-6 shadow-card">
                 <h2 className="font-heading text-lg font-bold text-brand-navy">Reach us directly</h2>
                 <div className="mt-4 space-y-3">
-                  <CallLink className="flex items-center gap-3 text-sm text-brand-navy/75 hover:text-brand-blue">
+                  <CallLink className="flex items-center gap-3 text-base text-brand-navy/75 hover:text-brand-blue">
                     <Phone className="h-4 w-4 shrink-0 text-brand-blue" />
                     +234 808 951 2286
                   </CallLink>
-                  <WhatsAppLink className="flex items-center gap-3 text-sm text-brand-navy/75 hover:text-brand-blue">
+                  <WhatsAppLink className="flex items-center gap-3 text-base text-brand-navy/75 hover:text-brand-blue">
                     <MessageCircle className="h-4 w-4 shrink-0 text-brand-blue" />
                     0813 045 2210
                   </WhatsAppLink>
@@ -44,7 +44,7 @@ export default function ContactPage() {
                     href={INSTAGRAM_URL}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-3 text-sm text-brand-navy/75 hover:text-brand-blue"
+                    className="flex items-center gap-3 text-base text-brand-navy/75 hover:text-brand-blue"
                   >
                     <InstagramIcon className="h-4 w-4 shrink-0 text-brand-blue" />
                     @designskonstruct
@@ -57,7 +57,7 @@ export default function ContactPage() {
                   <Clock className="h-5 w-5 text-brand-blue" />
                   Business hours
                 </h2>
-                <div className="mt-4 space-y-1 text-sm text-brand-navy/65">
+                <div className="mt-4 space-y-1 text-base text-brand-navy/65">
                   <p>Monday to Friday: 8am to 6pm</p>
                   <p>Saturday: 9am to 3pm</p>
                   <p>Sunday: Closed (WhatsApp messages still welcome)</p>
@@ -69,7 +69,7 @@ export default function ContactPage() {
                   <MapPin className="h-5 w-5 text-brand-blue" />
                   Service area
                 </h2>
-                <p className="mt-2 text-sm text-brand-navy/65">
+                <p className="mt-2 text-base text-brand-navy/65">
                   We take on projects across Nigeria. A map with our exact
                   location will go here once our office address is added.
                 </p>
