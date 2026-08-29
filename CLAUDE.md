@@ -83,9 +83,24 @@ an arbitrary one.
 
 **Scroll-reveal is one shared primitive.** `components/reveal.tsx` wraps
 children in an `IntersectionObserver`-driven fade/slide-in, no animation
-library. Section-level content on every page is wrapped in `<Reveal>` for
-the "content appears as you scroll" effect; the hero is not (it should be
-visible immediately on load).
+library. Every section on every page is wrapped in `<Reveal>` (including the
+top hero-style block on Services, Gallery, FAQs, About, Contact, and Privacy
+Policy) so the site reveals section by section on scroll, not all at once.
+The home page `Hero` is the one exception to the `<Reveal>` wrapper itself —
+it's above the fold and must be visible on load — but it still animates in
+on mount: its badge, headline, subtitle, CTA row, and each of the 3 fan
+images use the `animate-fade-in` / `animate-fade-up` CSS classes with
+staggered inline `animationDelay` values, so it reveals piece by piece too.
+Both animation classes use `animation-fill-mode: both`, which is what keeps
+an element hidden during its delay instead of flashing visible first —
+don't drop that if you touch `app/globals.css`.
+
+**Stat counters animate via `components/count-up.tsx`.** Same
+`IntersectionObserver` pattern as `Reveal`, but drives a `requestAnimationFrame`
+count from 0 to a target number with an ease-out curve. Used by
+`StatsTrusted` for the 80+/100%/24 hrs/3,300+ band. Pass the numeric `value`
+and a `suffix` string (`"+"`, `"%"`, `" hrs"`) rather than hardcoding the
+formatted string, so the count-up has an actual number to animate through.
 
 **Brand colors come from the logo, not a generic palette.** `tailwind.config.ts`
 defines `brand.blue` (#0068E8), `brand.navy` (#002060), and `brand.blue-light`
@@ -99,6 +114,42 @@ from `NEXT_PUBLIC_GA_ID`, unset by default). `components/contact-links.tsx`
 fires `call_click` / `whatsapp_click` events on click — use these components
 for any new phone/WhatsApp link rather than a raw `<a>` tag, so click
 tracking stays consistent.
+
+**Body copy is 16px minimum.** Tailwind's `text-sm` (14px) is reserved for
+genuine UI chrome: nav links, breadcrumbs, badges/eyebrow labels, image-card
+captions, and footer column headers. Anything a visitor reads as content
+(paragraphs, descriptions, FAQ answers, form labels/inputs, contact info)
+should be `text-base` (16px) or larger. If you add a new paragraph, default
+to `text-base`, not `text-sm`.
+
+**Button variants are background-aware, not just style-aware.** `components/ui/button.tsx`
+has `default` (solid brand blue, for light/white backgrounds), `navy`,
+`outline` (white border/text, for dark or colored backgrounds), and `white`
+(solid white with blue text, for use on the blue hero or other saturated
+backgrounds where a blue button would disappear). Pick the variant based on
+what the button sits on top of, not just which action it represents — e.g.
+the hero's primary CTA uses `white`, not `default`, because the hero
+background is now a blue gradient.
+
+## Deployment
+
+Live at **https://www.designskonstruct.com** (custom domain; `designskonstruct.com`
+and the project's `.vercel.app` URLs all redirect there). Vercel project name
+is `konstruct` under the `omole-creator-s-projects` team, linked via `.vercel/project.json`
+(gitignored) — `vercel --prod` from this directory deploys directly, and
+pushes to `main` also trigger a Git-integration deploy.
+
+Two non-obvious things had to be fixed post-deploy and must not regress:
+- **`vercel.json` pins `"framework": "nextjs"`.** The project's dashboard
+  Framework Preset had defaulted to "Other" at creation, which made Vercel
+  serve the raw `public/` folder as static output instead of running the
+  Next.js build (production domain returned `DEPLOYMENT_NOT_FOUND`). The
+  `vercel.json` override is what makes detection correct regardless of the
+  dashboard setting — don't remove it.
+- **SSO/Vercel Authentication protection is disabled** on the project
+  (`vercel project protection disable konstruct --sso`). It defaults to
+  protecting all non-custom-domain deployment URLs behind a login wall,
+  which would have blocked public visitors on the `.vercel.app` domain.
 
 ## Copy voice
 
