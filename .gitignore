@@ -1,0 +1,58 @@
+# dependencies
+/node_modules
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# local env files
+.env*.local
+.env
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+# playwright
+/test-results/
+/playwright-report/
+/.playwright/
+/.playwright-cli/
+
+# raw source assets (already organized into /public), kept locally only
+/A.webp
+/B.png
+/C.webp
+/D.jpg
+/E.jpg
+/F.webp
+/G.jpg
+/H.jpg
+/i.jpg
+/logo.png
+/AE Before work.jpg
+/AE Progress.jpg
+/AE Scaffolding installation for the maintenance of the glass.jpg
+/GR project.jpg
+/GR outcome.mp4
+/GM house, Bayelsa.mp4
+/GM house, Bayelsa 2.mp4
+/GM house, maintenance.mp4
+/COPYWRITING-PLAYBOOK.md
+/.qodo/
+/.claude/
