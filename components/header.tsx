@@ -21,9 +21,9 @@ export function Header() {
           <Image
             src="/images/designs-konstruct-logo.png"
             alt="Designs & Konstruct Ltd. logo"
-            width={56}
-            height={56}
-            className="h-12 w-12 object-contain sm:h-14 sm:w-14"
+            width={72}
+            height={72}
+            className="h-14 w-14 object-contain sm:h-16 sm:w-16"
             priority
           />
           <span className="font-heading text-base font-bold tracking-tight text-brand-navy sm:text-lg">

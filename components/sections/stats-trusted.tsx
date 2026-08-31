@@ -3,7 +3,7 @@ import { BadgeCheck, Building2, Home as HomeIcon } from "lucide-react";
 import { CountUp } from "@/components/count-up";
 
 const stats = [
-  { value: 80, suffix: "+", label: "Projects completed" },
+  { value: 150, suffix: "+", label: "Projects completed" },
   { value: 100, suffix: "%", label: "Success rate" },
   { value: 24, suffix: " hrs", label: "Average quote response" },
   { value: 3300, suffix: "+", label: "Likes on one client's public shout-out" },
