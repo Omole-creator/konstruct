@@ -21,9 +21,9 @@ export function Header() {
           <Image
             src="/images/designs-konstruct-logo.png"
             alt="Designs & Konstruct Ltd. logo"
-            width={40}
-            height={40}
-            className="h-9 w-9 object-contain sm:h-10 sm:w-10"
+            width={56}
+            height={56}
+            className="h-12 w-12 object-contain sm:h-14 sm:w-14"
             priority
           />
           <span className="font-heading text-base font-bold tracking-tight text-brand-navy sm:text-lg">
@@ -33,7 +33,7 @@ export function Header() {
 
         <nav className="hidden items-center gap-8 lg:flex">
           {navLinks.map((link) =>
-            link.label === "Services" ? (
+            link.label === "Products & Services" ? (
               <div
                 key={link.href}
                 className="group relative"
@@ -89,7 +89,7 @@ export function Header() {
             Call Now
           </CallLink>
           <Button asChild size="sm">
-            <Link href="/quote">Request a Quote</Link>
+            <Link href="/quote">Send Your Enquiry</Link>
           </Button>
         </div>
 
@@ -137,7 +137,7 @@ export function Header() {
             </CallLink>
             <Button asChild>
               <Link href="/quote" onClick={() => setMobileOpen(false)}>
-                Request a Quote
+                Send Your Enquiry
               </Link>
             </Button>
           </div>

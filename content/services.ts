@@ -11,6 +11,74 @@ export interface Service {
 
 export const services: Service[] = [
   {
+    slug: "shower-glass-solutions",
+    name: "Shower Glass Solutions",
+    shortDescription:
+      "Framed, frameless, and walk-in shower glass, fitted with safety features built in.",
+    description:
+      "We customize shower glass spaces with safety-rated glass and hardware built for daily use in a wet room. Whether you want a framed door, a frameless door, or an open walk-in layout, we measure the space and fit glass that seals right and stays that way.",
+    included: [
+      "Framed shower glass doors",
+      "Frameless shower glass doors",
+      "Walk-in showers",
+    ],
+    useCases: [
+      "New bathroom builds",
+      "Bathroom renovations replacing an old curtain or door",
+      "Homes wanting a frameless, minimal look",
+      "Hotels and short-let apartments",
+    ],
+    image: "/case-studies/shower-glass/shower-glass-framed-door.jpg",
+    imageAlt: "A framed shower glass door installed by Designs & Konstruct",
+  },
+  {
+    slug: "glass-balconies-staircases-architectural-glass",
+    name: "Glass Balconies, Staircases & Architectural Glass",
+    shortDescription:
+      "Balcony handrails, staircases, partitioning, shelving, canopies, and automated glass systems.",
+    description:
+      "Beyond doors and windows, we design and fit glass into the structure of a building. This covers balcony and handrail glazing, staircases, partitioning, shelving, suspended canopies, and automated systems like sensor doors and switchable privacy glass for offices and private areas.",
+    included: [
+      "Glass balconies and handrails",
+      "Staircases",
+      "Glass partitioning",
+      "Glass shelves",
+      "Suspended glass canopies",
+      "Automated sensor doors",
+      "Automated privacy glass for offices and private areas",
+    ],
+    useCases: [
+      "Multi-story homes and duplexes needing staircase glazing",
+      "Balconies and terraces needing a clear handrail",
+      "Open-plan offices needing partitioning or switchable privacy glass",
+      "Entrances wanting a suspended glass canopy",
+    ],
+    image: "/case-studies/posters/staircase-project-outcome.jpg",
+    imageAlt: "A finished glass staircase railing installed by Designs & Konstruct",
+  },
+  {
+    slug: "general-aluminum-works",
+    name: "General Aluminum Works",
+    shortDescription:
+      "Aluminum framing and fittings to match and support your glass installation.",
+    description:
+      "Most glass work needs an aluminum frame around it. We fabricate and fit aluminum window and door frames, sliding systems, and other structural aluminum work, sized and finished to match the glass it holds.",
+    included: [
+      "Aluminum window and door frames",
+      "Aluminum sliding systems",
+      "Structural aluminum fittings",
+      "Powder-coated and finished aluminum profiles",
+    ],
+    useCases: [
+      "New builds needing framed glass throughout",
+      "Sliding doors and windows for homes and offices",
+      "Storefronts needing an aluminum and glass frontage",
+      "Replacing worn or corroded aluminum frames",
+    ],
+    image: "/images/aluminium-glass-sliding-doors-waterfront.webp",
+    imageAlt: "Aluminium-framed glass sliding doors, an example of general aluminum work",
+  },
+  {
     slug: "installation-fitting",
     name: "Installation & Fitting",
     shortDescription:

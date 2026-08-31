@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 export const metadata: Metadata = {
   title: "Our Work",
   description:
-    "See completed glass glazing projects from Designs & Konstruct Ltd., including the Angola Embassy, the Governor's House in Bayelsa, and a frameless glass balustrade.",
+    "See completed glass glazing projects from Designs & Konstruct Ltd., including the Angola Embassy, staircase and shower glass installations, and a frameless glass balustrade.",
 };
 
 export default function GalleryPage() {
@@ -39,7 +39,7 @@ export default function GalleryPage() {
             </p>
             <div className="mt-6">
               <Button asChild size="lg">
-                <Link href="/quote">Request a similar project quote</Link>
+                <Link href="/quote">Send Your Enquiry</Link>
               </Button>
             </div>
           </div>

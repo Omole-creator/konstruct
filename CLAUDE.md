@@ -38,16 +38,25 @@ available via the same direct-node pattern if needed.
 
 **Content lives in `/content`, not scattered through JSX.** `services.ts`,
 `projects.ts`, `faqs.ts`, and `site.ts` are the single source of truth for
-the 5 service offerings, the 3 real case studies, FAQ copy, and nav links.
+the 8 service offerings, the 5 real case studies, FAQ copy, and nav links.
 Page components import from these rather than hardcoding copy, so editing
 a service description or adding a gallery item means editing one array, not
-hunting through page files.
+hunting through page files. The 3 shower/architectural/aluminum services
+are kept first in the `services` array on purpose (client asked for them to
+list before the original 5) — preserve that order if you add more.
 
-**Service pages are one dynamic route, not five files.** `app/services/[slug]/page.tsx`
+**Service pages are one dynamic route, not one file per service.** `app/services/[slug]/page.tsx`
 uses `generateStaticParams()` off `content/services.ts` to statically render
-all 5 service pages at build time, each with its own metadata. Add a new
+every service page at build time, each with its own metadata. Add a new
 service by adding an entry to the `services` array; don't create new page
 files for it.
+
+**`lib/whatsapp.ts` is also the canonical source for every contact detail**,
+not just the WhatsApp deep link: phone, WhatsApp number, Instagram, the two
+email addresses (`EMAIL_ENQUIRIES`, `EMAIL_SUPPORT`), and `OFFICE_ADDRESS`
+(Cadastral Zone 707, Lugbe Airport Road, FCT Abuja) all live there as
+exported constants. Footer and `/contact` both import from it rather than
+hardcoding the address or emails — do the same for any new contact touchpoint.
 
 **Forms submit via WhatsApp deep link, not a server.** There is no API route
 for the Get a Quote or Contact forms. `lib/whatsapp.ts` builds a formatted,
@@ -67,19 +76,32 @@ expand behavior is defined once. Case-study videos are never autoplayed or
 preloaded on page load — cards show a static poster JPG (pre-extracted with
 ffmpeg into `public/case-studies/posters/`) and the actual `<video>` only
 mounts inside the lightbox when clicked. This is deliberate for the mobile
-load-time target: the source clips in `public/case-studies/governors-house-bayelsa/`
-are 10-20MB phone recordings.
+load-time target: the source clips (e.g. in `public/case-studies/staircase-project/`)
+are phone recordings, kept web-sized (roughly 10-20MB) via a bitrate-capped
+ffmpeg re-encode.
 
 **Real work vs. stock photography is a hard line, not a styling choice.**
-`content/projects.ts` (Angola Embassy, Governor's House Bayelsa, glass
-railing) is the only content presented as the company's own completed
-projects, used in the home carousel and the `/gallery` page. The images in
-`public/images/` (the ones like `glass-steel-staircase-railing.webp`,
+`content/projects.ts` (Angola Embassy, staircase, shower glass, shower
+doors, glass railing) is the only content presented as the company's own
+completed projects, used in the home carousel and the `/gallery` page. The
+images in `public/images/` (the ones like `glass-steel-staircase-railing.webp`,
 `frameless-glass-shower-enclosure.png`) are licensed stock photography used
 only to illustrate services on the home page and service detail pages —
 never captioned as if they were a Designs & Konstruct job. Keep this
 separation when adding content; it's a credibility/honesty decision, not
 an arbitrary one.
+
+**All real project media is watermarked.** Every file under
+`public/case-studies/**` (photos and videos of the company's own completed
+work) carries a large, diagonal, semi-transparent overlay of
+`public/images/designs-konstruct-logo.png`, burned in with ffmpeg (scaled to
+~50% of the source width, rotated ~-25deg, ~38% opacity, centered) — this
+is to stop other companies from lifting the footage for their own
+promotion. Poster JPGs are extracted from the *watermarked* video, not the
+original, so the static preview and the video match. Stock photography in
+`public/images/` is never watermarked, since it isn't the company's own
+work. Apply the same treatment to any new case-study media before adding it
+to `content/projects.ts` or `content/services.ts`.
 
 **Scroll-reveal is one shared primitive.** `components/reveal.tsx` wraps
 children in an `IntersectionObserver`-driven fade/slide-in, no animation
@@ -129,7 +151,24 @@ has `default` (solid brand blue, for light/white backgrounds), `navy`,
 backgrounds where a blue button would disappear). Pick the variant based on
 what the button sits on top of, not just which action it represents — e.g.
 the hero's primary CTA uses `white`, not `default`, because the hero
-background is now a blue gradient.
+background is a photo (`public/images/hero-background.jpg`) with a brand
+navy-to-blue gradient overlay on top, not a flat color.
+
+**The hero background is an `<Image fill>` behind a gradient-overlay `<div>`,
+both plain DOM order, no `z-index`.** `components/sections/hero.tsx`'s
+`<section>` has `position: relative` but no `z-index`, so it never
+establishes its own stacking context — a negative `z-index` on the image or
+overlay would escape to the document root's stacking context and render
+*behind* the section's own opaque background, hiding it completely (this
+happened once; don't reintroduce `-z-10`/`-z-20` here). Correct stacking
+comes for free from DOM order alone: image first, gradient overlay next,
+content last.
+
+**The `link.label === "Products & Services"` string check in `components/header.tsx`
+picks the nav item that gets the services mega-menu.** It's a plain string
+match against `content/site.ts`'s `navLinks`, not a dedicated flag — if you
+reword that nav label again, update the check in `header.tsx` alongside it
+or the dropdown silently stops appearing.
 
 ## Deployment
 

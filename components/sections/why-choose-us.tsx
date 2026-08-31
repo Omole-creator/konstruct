@@ -24,7 +24,7 @@ const points = [
     icon: Award,
     title: "Trusted on buildings that can't afford mistakes",
     description:
-      "Our glass work has gone up at the Angola Embassy and at the Governor's House in Bayelsa, projects where the details get checked twice.",
+      "Our glass work has gone up at the Angola Embassy and on residential projects across Nigeria, where the details get checked twice.",
   },
 ];
 

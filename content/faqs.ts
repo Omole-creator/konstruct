@@ -22,7 +22,7 @@ export const faqs: Faq[] = [
   {
     question: "What areas do you cover?",
     answer:
-      "We take on projects across Nigeria, including the glass work we've completed at the Governor's House in Bayelsa and at an embassy building. If you're not sure whether your location is within reach, send us a message and we'll let you know.",
+      "We take on projects across Nigeria, from our office in Abuja to residential and commercial jobs like an embassy building. If you're not sure whether your location is within reach, send us a message and we'll let you know.",
   },
   {
     question: "How does pricing work if there's nothing listed on the site?",

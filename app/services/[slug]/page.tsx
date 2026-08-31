@@ -42,7 +42,7 @@ export default async function ServiceDetailPage({
         <div className="mx-auto max-w-8xl px-4 sm:px-6 lg:px-10">
           <nav className="flex items-center gap-1 text-xs text-brand-navy/50">
             <Link href="/services" className="hover:text-brand-blue">
-              Services
+              Products &amp; Services
             </Link>
             <ChevronRight className="h-3 w-3" />
             <span className="text-brand-navy">{service.name}</span>
@@ -56,7 +56,7 @@ export default async function ServiceDetailPage({
               <p className="mt-5 text-brand-navy/70">{service.description}</p>
               <div className="mt-8">
                 <Button asChild size="lg">
-                  <Link href="/quote">Request a Quote</Link>
+                  <Link href="/quote">Send Your Enquiry</Link>
                 </Button>
               </div>
             </Reveal>

@@ -1,12 +1,12 @@
 import Link from "next/link";
 import Image from "next/image";
-import { MapPin, MessageCircle, Phone } from "lucide-react";
+import { Mail, MapPin, MessageCircle, Phone } from "lucide-react";
 
 import { services } from "@/content/services";
 import { navLinks, siteConfig } from "@/content/site";
 import { CallLink, WhatsAppLink } from "@/components/contact-links";
 import { InstagramIcon } from "@/components/icons/instagram-icon";
-import { INSTAGRAM_URL } from "@/lib/whatsapp";
+import { EMAIL_ENQUIRIES, INSTAGRAM_URL, OFFICE_ADDRESS } from "@/lib/whatsapp";
 
 export function Footer() {
   const year = new Date().getFullYear();
@@ -49,14 +49,14 @@ export function Footer() {
             ))}
             <li>
               <Link href="/quote" className="text-base text-white/80 hover:text-brand-blue">
-                Request a Quote
+                Send Your Enquiry
               </Link>
             </li>
           </ul>
         </div>
 
         <div>
-          <h3 className="text-sm font-semibold uppercase tracking-wider text-white/50">Services</h3>
+          <h3 className="text-sm font-semibold uppercase tracking-wider text-white/50">Products &amp; Services</h3>
           <ul className="mt-4 space-y-3">
             {services.map((service) => (
               <li key={service.slug}>
@@ -83,9 +83,18 @@ export function Footer() {
                 <span>WhatsApp: 0813 045 2210</span>
               </WhatsAppLink>
             </li>
-            <li className="flex items-center gap-3 text-base text-white/50">
-              <MapPin className="h-4 w-4 shrink-0" />
-              <span>Serving clients across Nigeria</span>
+            <li>
+              <a
+                href={`mailto:${EMAIL_ENQUIRIES}`}
+                className="flex items-center gap-3 text-base text-white/80 hover:text-brand-blue"
+              >
+                <Mail className="h-4 w-4 shrink-0" />
+                <span>{EMAIL_ENQUIRIES}</span>
+              </a>
+            </li>
+            <li className="flex items-start gap-3 text-base text-white/50">
+              <MapPin className="mt-0.5 h-4 w-4 shrink-0" />
+              <span>{OFFICE_ADDRESS}</span>
             </li>
           </ul>
         </div>

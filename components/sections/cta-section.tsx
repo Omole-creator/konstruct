@@ -38,7 +38,7 @@ export function CTASection({
           </div>
 
           <Button asChild variant="navy" size="lg">
-            <Link href="/quote">Request a Quote</Link>
+            <Link href="/quote">Send Your Enquiry</Link>
           </Button>
         </div>
       </div>

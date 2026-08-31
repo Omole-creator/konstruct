@@ -13,7 +13,7 @@ import { Reveal } from "@/components/reveal";
 export const metadata: Metadata = {
   title: "Glass Design, Fabrication & Installation in Nigeria",
   description:
-    "Designs & Konstruct Ltd. designs, cuts, and installs glass and glass-substitute products for homes, offices, and institutions. Request a quote today.",
+    "Designs & Konstruct Ltd. designs, cuts, and installs glass and glass-substitute products for homes, offices, and institutions. Send your enquiry today.",
 };
 
 export default function HomePage() {
@@ -26,7 +26,7 @@ export default function HomePage() {
           <div className="mx-auto max-w-2xl text-center">
             <p className="text-sm font-semibold uppercase tracking-wider text-brand-blue">What We Do</p>
             <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight text-brand-navy sm:text-4xl">
-              Five ways we work with glass
+              Our products and services
             </h2>
             <p className="mt-4 text-brand-navy/65">
               From the first cut to the final seal, here's where we come in.

@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { Clock, MapPin, MessageCircle, Phone } from "lucide-react";
+import { Clock, Mail, MapPin, MessageCircle, Phone } from "lucide-react";
 
 import { Reveal } from "@/components/reveal";
 import { ContactForm } from "@/components/contact-form";
 import { CallLink, WhatsAppLink } from "@/components/contact-links";
 import { InstagramIcon } from "@/components/icons/instagram-icon";
-import { INSTAGRAM_URL } from "@/lib/whatsapp";
+import { EMAIL_ENQUIRIES, EMAIL_SUPPORT, INSTAGRAM_URL, OFFICE_ADDRESS } from "@/lib/whatsapp";
 
 export const metadata: Metadata = {
   title: "Contact Us",
@@ -41,6 +41,20 @@ export default function ContactPage() {
                     0813 045 2210
                   </WhatsAppLink>
                   <a
+                    href={`mailto:${EMAIL_ENQUIRIES}`}
+                    className="flex items-center gap-3 text-base text-brand-navy/75 hover:text-brand-blue"
+                  >
+                    <Mail className="h-4 w-4 shrink-0 text-brand-blue" />
+                    {EMAIL_ENQUIRIES}
+                  </a>
+                  <a
+                    href={`mailto:${EMAIL_SUPPORT}`}
+                    className="flex items-center gap-3 text-base text-brand-navy/75 hover:text-brand-blue"
+                  >
+                    <Mail className="h-4 w-4 shrink-0 text-brand-blue" />
+                    {EMAIL_SUPPORT} <span className="text-brand-navy/50">(customer care)</span>
+                  </a>
+                  <a
                     href={INSTAGRAM_URL}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -64,14 +78,14 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              <div className="rounded-2xl border border-dashed border-brand-navy/20 bg-brand-blue-tint p-6">
+              <div className="rounded-2xl border border-brand-navy/10 bg-brand-blue-tint p-6">
                 <h2 className="flex items-center gap-2 font-heading text-sm font-bold text-brand-navy">
                   <MapPin className="h-5 w-5 text-brand-blue" />
-                  Service area
+                  Our office
                 </h2>
+                <p className="mt-2 text-base text-brand-navy/65">{OFFICE_ADDRESS}</p>
                 <p className="mt-2 text-base text-brand-navy/65">
-                  We take on projects across Nigeria. A map with our exact
-                  location will go here once our office address is added.
+                  We also take on projects across Nigeria beyond Abuja.
                 </p>
               </div>
             </div>

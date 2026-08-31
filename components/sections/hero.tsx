@@ -37,13 +37,17 @@ const fanImages = [
 
 export function Hero() {
   return (
-    <section className="relative w-full overflow-hidden bg-[linear-gradient(175deg,#001336_0%,#0068E8_50%,#0052BA_100%)]">
-      <div
-        className="pointer-events-none absolute inset-0 -z-10 h-[640px] w-full bg-[linear-gradient(to_right,rgba(255,255,255,0.08)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.08)_1px,transparent_1px)] bg-[size:6rem_5rem] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_65%,transparent_105%)]"
-        aria-hidden
+    <section className="relative w-full overflow-hidden bg-brand-navy">
+      <Image
+        src="/images/hero-background.jpg"
+        alt=""
+        fill
+        priority
+        sizes="100vw"
+        className="object-cover"
       />
       <div
-        className="pointer-events-none absolute left-1/2 top-[380px] -z-10 h-[420px] w-[130%] -translate-x-1/2 rounded-[100%] bg-[radial-gradient(closest-side,rgba(255,255,255,0.35)_0%,transparent_70%)]"
+        className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(0,19,54,0.75)_0%,rgba(0,32,80,0.55)_35%,rgba(0,82,186,0.4)_100%)]"
         aria-hidden
       />
       <div
@@ -51,7 +55,7 @@ export function Hero() {
         aria-hidden
       />
 
-      <div className="mx-auto flex max-w-5xl flex-col items-center px-4 pb-4 pt-16 text-center sm:px-6 sm:pt-24">
+      <div className="relative mx-auto flex max-w-5xl flex-col items-center px-4 pb-4 pt-16 text-center sm:px-6 sm:pt-24">
         <Link href="/services" className="group animate-fade-in" style={{ animationDelay: "0ms" }}>
           <span className="mx-auto flex w-fit items-center justify-center rounded-full border-[1.5px] border-white/25 bg-white/10 px-5 py-2 text-xs font-semibold uppercase tracking-wide text-white backdrop-blur sm:text-sm">
             Precision Glass Design &amp; Installation
@@ -80,7 +84,7 @@ export function Hero() {
           style={{ animationDelay: "450ms" }}
         >
           <Button asChild variant="white" size="lg" className="flex-1 sm:flex-none">
-            <Link href="/quote">Request a Quote</Link>
+            <Link href="/quote">Send Your Enquiry</Link>
           </Button>
           <Button asChild variant="outline" size="lg" className="flex-1 sm:flex-none">
             <CallLink className="flex items-center justify-center gap-2">

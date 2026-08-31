@@ -11,7 +11,7 @@ const stats = [
 
 const trustedBy = [
   { name: "Angola Embassy", icon: Building2 },
-  { name: "Governor's House, Bayelsa", icon: HomeIcon },
+  { name: "Residential Clients", icon: HomeIcon },
   { name: "Deji Adeyanju", icon: BadgeCheck },
 ];
 

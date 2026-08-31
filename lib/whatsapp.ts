@@ -9,6 +9,12 @@ export const WHATSAPP_BASE_URL = `https://wa.me/${WHATSAPP_NUMBER_INTL}`;
 
 export const INSTAGRAM_URL = "https://www.instagram.com/designskonstruct";
 
+export const EMAIL_ENQUIRIES = "enquiries@designskonstruct.com";
+export const EMAIL_SUPPORT = "support@designskonstruct.com";
+
+export const OFFICE_ADDRESS =
+  "Cadastral Zone 707, Lugbe Airport Road (opposite Voice of Nigeria junction), FCT Abuja";
+
 export function whatsappLink(message?: string) {
   if (!message) return WHATSAPP_BASE_URL;
   return `${WHATSAPP_BASE_URL}?text=${encodeURIComponent(message)}`;

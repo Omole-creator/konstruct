@@ -6,9 +6,9 @@ import { ServicesGrid } from "@/components/sections/services-grid";
 import { CTASection } from "@/components/sections/cta-section";
 
 export const metadata: Metadata = {
-  title: "Services",
+  title: "Products & Services",
   description:
-    "Installation & fitting, custom cutting & fabrication, repair & replacement, sealing & weatherproofing, and blueprint & architectural support from Designs & Konstruct Ltd.",
+    "Shower glass, glass balconies and staircases, aluminum works, installation & fitting, custom cutting & fabrication, repair & replacement, sealing & weatherproofing, and blueprint & architectural support from Designs & Konstruct Ltd.",
 };
 
 export default function ServicesPage() {
