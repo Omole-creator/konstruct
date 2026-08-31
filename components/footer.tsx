@@ -6,7 +6,7 @@ import { services } from "@/content/services";
 import { navLinks, siteConfig } from "@/content/site";
 import { CallLink, WhatsAppLink } from "@/components/contact-links";
 import { InstagramIcon } from "@/components/icons/instagram-icon";
-import { EMAIL_ENQUIRIES, INSTAGRAM_URL, OFFICE_ADDRESS } from "@/lib/whatsapp";
+import { EMAIL_ENQUIRIES, EMAIL_GENERAL, INSTAGRAM_URL, OFFICE_ADDRESS } from "@/lib/whatsapp";
 
 export function Footer() {
   const year = new Date().getFullYear();
@@ -82,6 +82,15 @@ export function Footer() {
                 <MessageCircle className="h-4 w-4 shrink-0" />
                 <span>WhatsApp: 0813 045 2210</span>
               </WhatsAppLink>
+            </li>
+            <li>
+              <a
+                href={`mailto:${EMAIL_GENERAL}`}
+                className="flex items-center gap-3 text-base text-white/80 hover:text-brand-blue"
+              >
+                <Mail className="h-4 w-4 shrink-0" />
+                <span>{EMAIL_GENERAL}</span>
+              </a>
             </li>
             <li>
               <a

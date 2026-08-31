@@ -9,6 +9,7 @@ export const WHATSAPP_BASE_URL = `https://wa.me/${WHATSAPP_NUMBER_INTL}`;
 
 export const INSTAGRAM_URL = "https://www.instagram.com/designskonstruct";
 
+export const EMAIL_GENERAL = "designskonstruct@gmail.com";
 export const EMAIL_ENQUIRIES = "enquiries@designskonstruct.com";
 export const EMAIL_SUPPORT = "support@designskonstruct.com";
 
