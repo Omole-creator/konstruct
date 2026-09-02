@@ -80,6 +80,15 @@ load-time target: the source clips (e.g. in `public/case-studies/staircase-proje
 are phone recordings, kept web-sized (roughly 10-20MB) via a bitrate-capped
 ffmpeg re-encode.
 
+**The featured carousel has prev/next arrows in addition to swipe/auto-advance.**
+`components/sections/featured-projects-carousel.tsx` renders two absolutely-
+positioned circular buttons at the left and right extremes of the track
+(`goTo()` wraps the index with modulo in both directions), on top of the
+existing touch-swipe scroll and the dot indicators below. All three ways of
+navigating funnel through the same `goTo()`/`setIndex()` state, so keep new
+navigation affordances wired through it rather than scrolling the track
+directly.
+
 **Real work vs. stock photography is a hard line, not a styling choice.**
 `content/projects.ts` (Angola Embassy, staircase, shower glass, shower
 doors, glass railing) is the only content presented as the company's own
@@ -89,7 +98,12 @@ images in `public/images/` (the ones like `glass-steel-staircase-railing.webp`,
 only to illustrate services on the home page and service detail pages —
 never captioned as if they were a Designs & Konstruct job. Keep this
 separation when adding content; it's a credibility/honesty decision, not
-an arbitrary one.
+an arbitrary one. This applies to `content/services.ts`'s `image` field too
+— it should point at a stock photo in `public/images/`, not a case-study
+image from `public/case-studies/`, even though both are valid `src` values
+Next's `<Image>` will happily render (a prior version of this file wired
+the Shower Glass Solutions service image straight to a watermarked
+case-study photo; it now points at `public/images/gold-framed-sliding-shower-door.jpg`).
 
 **All real project media is watermarked.** Every file under
 `public/case-studies/**` (photos and videos of the company's own completed

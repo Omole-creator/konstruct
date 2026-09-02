@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
-import { Play } from "lucide-react";
+import { ChevronLeft, ChevronRight, Play } from "lucide-react";
 
 import { featuredCarouselItems } from "@/content/projects";
 import { useLightbox } from "@/components/media-lightbox";
@@ -32,14 +32,36 @@ export function FeaturedProjectsCarousel() {
     }
   }, [index]);
 
+  const goTo = (nextIndex: number) => {
+    const total = featuredCarouselItems.length;
+    setIndex(((nextIndex % total) + total) % total);
+  };
+
   return (
     <div
-      className="w-full"
+      className="relative w-full"
       onMouseEnter={() => (pausedRef.current = true)}
       onMouseLeave={() => (pausedRef.current = false)}
       onTouchStart={() => (pausedRef.current = true)}
       onTouchEnd={() => (pausedRef.current = false)}
     >
+      <button
+        type="button"
+        aria-label="Previous project"
+        onClick={() => goTo(index - 1)}
+        className="absolute left-1 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white/90 text-brand-navy shadow-lg transition-transform hover:scale-105 sm:left-2 sm:h-11 sm:w-11"
+      >
+        <ChevronLeft className="h-5 w-5" />
+      </button>
+      <button
+        type="button"
+        aria-label="Next project"
+        onClick={() => goTo(index + 1)}
+        className="absolute right-1 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white/90 text-brand-navy shadow-lg transition-transform hover:scale-105 sm:right-2 sm:h-11 sm:w-11"
+      >
+        <ChevronRight className="h-5 w-5" />
+      </button>
+
       <div
         ref={trackRef}
         className="flex gap-4 overflow-x-auto scroll-smooth px-4 pb-4 [scrollbar-width:none] sm:px-6 lg:px-10 [&::-webkit-scrollbar]:hidden"
@@ -95,7 +117,7 @@ export function FeaturedProjectsCarousel() {
             key={item.id}
             type="button"
             aria-label={`Show ${item.projectName} - ${item.caption}`}
-            onClick={() => setIndex(dotIndex)}
+            onClick={() => goTo(dotIndex)}
             className={`h-1.5 rounded-full transition-all ${
               dotIndex === index ? "w-6 bg-brand-blue" : "w-1.5 bg-brand-navy/20"
             }`}

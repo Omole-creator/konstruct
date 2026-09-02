@@ -28,8 +28,8 @@ export const services: Service[] = [
       "Homes wanting a frameless, minimal look",
       "Hotels and short-let apartments",
     ],
-    image: "/case-studies/shower-glass/shower-glass-framed-door.jpg",
-    imageAlt: "A framed shower glass door installed by Designs & Konstruct",
+    image: "/images/gold-framed-sliding-shower-door.jpg",
+    imageAlt: "A gold-framed sliding shower glass door, an example of framed shower glass work",
   },
   {
     slug: "glass-balconies-staircases-architectural-glass",
